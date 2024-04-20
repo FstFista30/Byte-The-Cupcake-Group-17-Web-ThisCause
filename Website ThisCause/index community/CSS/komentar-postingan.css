@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+.border-main {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 45%;
+  columns: #626262;
+}
+.post-container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 0px 20px 0 20px;
+  color: #626262;
+  margin: 20px 0;
+}
+.post-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-icons a div {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 65px;
+  color: #000000;
+  font-size: small;
+}
+.activity-icons a div i {
+  font-size: large;
+  padding: 10%;
+}
+
+.activity-icons2 a div {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #000000;
+  font-size: small;
+}
+.activity-icons2 a div i {
+  font-size: large;
+  padding: 10%;
+}
+.format-waktu {
+  font-size: small;
+}
+
+.post-row .hastag-post {
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #ff5f04;
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 3px 10px 1px;
+  width: 100px;
+  margin-left: 350%;
+}
+.post-container .keterangan2 {
+  margin-bottom: none;
+}
+
+.input-group input {
+  border: 1px solid #000000;
+  border-right: none;
+}
+hr {
+  border: none;
+  height: 2px;
+  color: #000000;
+  background-color: #000000;
+  
+}
