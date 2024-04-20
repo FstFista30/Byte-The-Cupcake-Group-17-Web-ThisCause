@@ -1,0 +1,343 @@
+:root {
+    --main-color: #ec5e04;
+    --dark-main: #ee5214;
+    --sec-color: #1f3075;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.content {
+    display: flex;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all .35s ease-in-out;
+}
+
+#sidebar {
+    position: relative;
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .35s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-main);
+}
+
+#sidebar .room-info {
+    display: none;
+}
+
+#sidebar.expand {
+    width: 300px;
+    min-width: 300px;
+}
+
+#btn-toggle {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 15px 25px;
+}
+
+#btn-toggle i {
+    font-size: 25px;
+    color: #fff;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo img {
+    width: 80%;
+}
+
+
+#sidebar.expand .room-info {
+    display: block;
+}
+
+
+.room-info img {
+    width: 100%;
+}
+
+.room-info p,
+.room-info h4 {
+    margin: 0;
+    padding: 10px 10px 0 10px;
+    color: #fff;
+}
+
+#sidebar.expand .sidebar-nav {
+    display: none;
+}
+
+.sidebar-nav i {
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 0px;
+}
+
+.sidebar-nav i:hover {
+    color: var(--sec-color);
+}
+
+.sidebar-footer {
+    display: none;
+    height: 70px;
+}
+
+#sidebar.expand .sidebar-footer{
+    position: absolute;
+    background-color: var(--sec-color);
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.sidebar-footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.sidebar-footer span {
+    color: #fff;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.sidebar-footer .chat-icon {
+    margin: 0;
+    display: flex;
+}
+
+.chat-icon i {
+    font-size: 20px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.chat-icon i:hover {
+    color: var(--dark-main);
+}
+
+.btn {
+    font-size: 16px;
+    border-radius: 100px;
+    padding: 5px 20px;
+}
+
+.btn-brand {
+    background-color: #ee1414;
+    color: white;
+}
+
+.btn-brand:hover {
+    color: #ee1414;
+    background-color: white;
+    border-color: #ee1414;
+}
+
+#audience {
+    position: relative;
+}
+
+#audience .audience-card {
+    width: 1300px;
+    margin: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.audience-card .card {
+    width: 200px;
+    height: 250px;
+    background-color: #ee5214;
+}
+
+.audience-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    display: flex;
+    position: absolute;
+    gap: 50px;
+}
+
+.card-icon img {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.emoji-chat {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 380px;
+    padding: 0 10px;
+    gap: 5px;
+    border: 4px solid #ee5214;
+    background-color: #fff;
+    border-radius: 50px;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition:  all .35s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+}
+
+.emoji-chat.show {
+    display: flex;
+    justify-content: center;
+    top: 90%;
+}
+
+.emoji-chat img {
+    cursor: pointer;
+}
+
+.wrapper-chat {
+    position: absolute;
+    right: -30%;
+    bottom: 0;
+    width: 420px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+    transition:  all .35s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+}
+
+.wrapper-chat.show {
+    right: 0;
+}
+
+.side-chat .header {
+    background-color: #ee5214;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.side-chat .header h2 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.side-chat .chat-box {
+    height: 780px;
+    overflow-y: auto;
+    padding: 15px 20px 70px;
+}
+
+.chat-box .chat {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-box .outgoing {
+    justify-content: flex-end;
+}
+
+.chat-box .chat img {
+    width: 38px;
+    height: 38px;
+    margin: 0 10px 0 0;
+    border-radius: 50px;
+}
+
+.chat-box .incoming span {
+    color: #333;
+    padding: 12px;
+    font-size: 14px;
+    background-color: gainsboro;
+    border-radius: 0 10px 10px 10px;
+}
+
+.incoming span h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.incoming span p {
+    margin: 0;
+}
+
+.outgoing span {
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px 10px 0 10px;
+    background-color: #ee5214;
+}
+
+.outgoing span p {
+    margin: 0;
+}
+
+.side-chat .chat-input {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    background-color: #fff;
+    display: flex;
+    gap: 5px;
+    border: 1px solid;
+    margin: 10px;
+    border: 1px solid #ee5214;
+    border-radius: 5px;
+}
+
+.chat-input textarea {
+    height: 55px;
+    width: 350px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    border: none;
+    padding: 15px 0 15px 15px;
+}
+
+.chat-input i {
+    align-self: flex-end;
+    height: 55px;
+    color: #ee5214;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 15px 15px 0;
+}
