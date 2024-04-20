@@ -1,0 +1,27 @@
+#navbar {
+ background-color: #ff5f04"
+}
+
+.imgsearch {
+    position: absolute;
+    width: fit-content;
+    margin: auto;
+
+  }
+
+  #row{
+    padding-left: 4rem;
+  }
+  
+  #thiscause {
+    padding-left: 18rem;
+    padding-right: 18rem;
+
+    }
+    .card-footer small{
+        color: white;
+    }
+    .card-footer small {
+        margin-right: 20px;
+      }
+      
